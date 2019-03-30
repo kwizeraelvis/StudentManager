@@ -29,11 +29,12 @@
 			</Target>
 			<Target title="hello">
 				<Option output="/home/elvis/StudentManager/cmake-build-debug/hello" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/elvis/StudentManager/cmake-build-debug"/>
+				<Option working_dir=""/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/elvis/StudentManager/include"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/i386-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -52,11 +53,12 @@
 			</Target>
 			<Target title="hello/fast">
 				<Option output="/home/elvis/StudentManager/cmake-build-debug/hello" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/elvis/StudentManager/cmake-build-debug"/>
+				<Option working_dir=""/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/elvis/StudentManager/include"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/i386-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -85,6 +87,9 @@
 			</Target>
 		</Build>
 		<Unit filename="/home/elvis/StudentManager/main.c">
+			<Option target="hello"/>
+		</Unit>
+		<Unit filename="/home/elvis/StudentManager/src/headertest.c">
 			<Option target="hello"/>
 		</Unit>
 		<Unit filename="/home/elvis/StudentManager/CMakeLists.txt">
