@@ -89,6 +89,9 @@
 		<Unit filename="/home/elvis/StudentManager/main.c">
 			<Option target="hello"/>
 		</Unit>
+		<Unit filename="/home/elvis/StudentManager/src/headertest.c">
+			<Option target="hello"/>
+		</Unit>
 		<Unit filename="/home/elvis/StudentManager/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
