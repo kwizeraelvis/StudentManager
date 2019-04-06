@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 
+
+The MIT License (MIT)
+
+Copyright (c) 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+Author: Kwizera Aime Elvis, Higiro Emile
+
+-->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <!-- interface-license-type mit -->
+  <!-- interface-name Crank Hotel Managament System -->
+  <!-- interface-description C end of Semester Project -->
+  <!-- interface-authors Kwizera Aime Elvis, Higiro Emile -->
+  <object class="GtkWindow" id="login_main">
+    <property name="name">main_window</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Login</property>
+    <property name="modal">True</property>
+    <property name="window_position">center</property>
+    <property name="icon_name">system-software-update</property>
+    <signal name="delete-event" handler="gtk_main_quit" swapped="no"/>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="login_conainer">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkImage">
+            <property name="width_request">256</property>
+            <property name="height_request">256</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="pixbuf">res/login.png</property>
+          </object>
+          <packing>
+            <property name="x">11</property>
+            <property name="y">68</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="txt_password">
+            <property name="width_request">200</property>
+            <property name="height_request">29</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="max_length">20</property>
+            <property name="visibility">False</property>
+            <property name="invisible_char">.</property>
+            <property name="secondary_icon_name">face-smile-symbolic</property>
+            <property name="secondary_icon_tooltip_text" translatable="yes">Insert Emoji</property>
+            <property name="secondary_icon_tooltip_markup" translatable="yes">Insert Emoji</property>
+            <property name="placeholder_text" translatable="yes">@USER PASSWORD</property>
+            <property name="input_purpose">password</property>
+            <property name="show_emoji_icon">True</property>
+          </object>
+          <packing>
+            <property name="x">297</property>
+            <property name="y">188</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="txt_username">
+            <property name="width_request">200</property>
+            <property name="height_request">29</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+            <property name="secondary_icon_name">face-smile-symbolic</property>
+            <property name="secondary_icon_tooltip_text" translatable="yes">Insert Emoji</property>
+            <property name="secondary_icon_tooltip_markup" translatable="yes">Insert Emoji</property>
+            <property name="placeholder_text" translatable="yes">@USERNAME</property>
+            <property name="input_purpose">name</property>
+            <property name="show_emoji_icon">True</property>
+          </object>
+          <packing>
+            <property name="x">297</property>
+            <property name="y">118</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btn_login">
+            <property name="label" translatable="yes">Login</property>
+            <property name="width_request">150</property>
+            <property name="height_request">29</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_login_btn_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">322</property>
+            <property name="y">252</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">484</property>
+            <property name="height_request">26</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Personal Diary</property>
+          </object>
+          <packing>
+            <property name="x">28</property>
+            <property name="y">14</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
