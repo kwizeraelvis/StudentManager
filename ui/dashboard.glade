@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkImage" id="image1">
+    <property name="width_request">110</property>
+    <property name="height_request">89</property>
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-remove</property>
+    <property name="icon_size">6</property>
+  </object>
+  <object class="GtkImage" id="image2">
+    <property name="width_request">110</property>
+    <property name="height_request">89</property>
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="tooltip_text" translatable="yes">System Settings</property>
+    <property name="stock">gtk-properties</property>
+    <property name="icon_size">6</property>
+  </object>
+  <object class="GtkImage" id="image3">
+    <property name="width_request">110</property>
+    <property name="height_request">89</property>
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-add</property>
+    <property name="icon_size">6</property>
+  </object>
+  <object class="GtkImage" id="image4">
+    <property name="width_request">110</property>
+    <property name="height_request">89</property>
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-find</property>
+    <property name="icon_size">6</property>
+    <style>
+      <class name="img"/>
+    </style>
+  </object>
+  <object class="GtkImage" id="image5">
+    <property name="width_request">110</property>
+    <property name="height_request">89</property>
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-edit</property>
+    <property name="icon_size">6</property>
+  </object>
+  <object class="GtkImage" id="image6">
+    <property name="width_request">110</property>
+    <property name="height_request">89</property>
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">res/icons/report.png</property>
+  </object>
+  <object class="GtkWindow" id="dashboard">
+    <property name="width_request">500</property>
+    <property name="height_request">300</property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Student Managment </property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window_position">center</property>
+    <property name="icon_name">applications-office</property>
+    <property name="gravity">center</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="margin_left">34</property>
+        <property name="margin_right">34</property>
+        <child>
+          <object class="GtkButton" id="add">
+            <property name="width_request">146</property>
+            <property name="height_request">101</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Add a new student</property>
+            <property name="image">image3</property>
+            <signal name="clicked" handler="on_add_clicked" swapped="no"/>
+            <style>
+              <class name="btn_margin"/>
+            </style>
+          </object>
+          <packing>
+            <property name="x">31</property>
+            <property name="y">26</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="edit">
+            <property name="width_request">146</property>
+            <property name="height_request">101</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Edit records for a student</property>
+            <property name="image">image5</property>
+            <signal name="clicked" handler="on_edit_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">213</property>
+            <property name="y">28</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="list">
+            <property name="width_request">146</property>
+            <property name="height_request">101</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Show all available students</property>
+            <property name="image">image6</property>
+            <signal name="clicked" handler="on_list_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">392</property>
+            <property name="y">22</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="search">
+            <property name="width_request">146</property>
+            <property name="height_request">101</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Search for a particular student</property>
+            <property name="image">image4</property>
+            <signal name="clicked" handler="on_search_clicked" swapped="no"/>
+            <style>
+              <class name="btn_margin"/>
+            </style>
+          </object>
+          <packing>
+            <property name="x">30</property>
+            <property name="y">154</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="delete">
+            <property name="width_request">146</property>
+            <property name="height_request">101</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">Remove a particular student</property>
+            <property name="image">image1</property>
+            <signal name="clicked" handler="on_delete_clicked" swapped="no"/>
+            <style>
+              <class name="btn_margin"/>
+            </style>
+          </object>
+          <packing>
+            <property name="x">213</property>
+            <property name="y">160</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="settings">
+            <property name="width_request">146</property>
+            <property name="height_request">101</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="image">image2</property>
+            <signal name="clicked" handler="on_settings_clicked" swapped="no"/>
+            <style>
+              <class name="btn_margin"/>
+            </style>
+          </object>
+          <packing>
+            <property name="x">391</property>
+            <property name="y">162</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
