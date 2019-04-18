@@ -1,12 +1,35 @@
 cmake_minimum_required(VERSION 2.8.9)
+project(StudentManager)
 
-project(hello)
 
-#Including Headers Defination Folder
+include(FindPkgConfig)
+pkg_check_modules(GTK REQUIRED gtk+-3.0)
+pkg_check_modules(GLIB REQUIRED glib-2.0)
+pkg_check_modules(LIBMYSQLCLIENT REQUIRED mysqlclient)
+pkg_check_modules(JSONC REQUIRED json-c)
+
+foreach(FLAG ${LIBMYSQLCLIENT_CFLAGS_OTHER})
+    set(CMAKE_C_FLAGS "${CMAKE_FLAGS} ${FLAGS}")
+        endforeach()
+
+
+include_directories(${GLIB_INCLUDE_DIRS})
+include_directories(${GTK_INCLUDE_DIRS})
+include_directories(${LIBMYSQLCLIENT_INCLUDE_DIRS})
+include_directories(${JSONC_INCLUDE_DIRS})
 include_directories(include)
 
+link_directories(${GLIB_INCLUDE_DIRS})
+link_directories(${GTK_LIBRARY_DIRS})
+link_directories(/usr/include/mysql/)
+link_directories(${LIBMYSQLCLIENT_LIBRARY_DIRS})
+link_directories(${JSONC_LIBRARY_DIRS})
 
-#include Source Files
 file(GLOB SOURCES "src/*.c")
 
-add_executable(hello main.c ${SOURCES})
+
+add_definitions(${GTK_CFLAGS_OTHER})
+
+add_executable(StudentManager main.c ${SOURCES})
+
+target_link_libraries(StudentManager ${GTK_LIBRARIES} ${GLIB_LIBRARIES} ${LIBMYSQLCLIENT_LIBRARIES} ${JSONC_LIBRARIES})
