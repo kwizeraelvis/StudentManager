@@ -17,7 +17,7 @@
 #include <gmodule.h>
 #include <json-c/json.h>
 #include "filepath.h"
-#include "callback.h"
+#include "dashboard.h"
 
 //datastructures and variables
 typedef struct {
@@ -30,6 +30,26 @@ typedef struct{
     gchar *passwd_cred;
 }USER_INFO;
 
+typedef struct {
+    GtkWidget *firstname;
+    GtkWidget *lastname;
+    GtkWidget *id;
+    GtkWidget *male;
+    GtkWidget *female;
+    GtkWidget *age;
+}STUDENT_DATA;
+
+typedef struct {
+     gchar *firstname;
+     gchar *lastname;
+     gchar  *id;
+     gchar *gender;
+     gint  *age;
+}STUDENT_INFO;
+
+typedef enum sex {
+    MALE,FEMALE
+}GENDER;
 
 FILE *fp;
 
@@ -45,7 +65,6 @@ void filterRecord();
 void viewRecord();
 void deleteRecord();
 void editRecord();
-void mainwindow();
 USER_INFO parseJson();
 
 

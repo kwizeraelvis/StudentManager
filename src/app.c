@@ -5,13 +5,7 @@
 #include "../include/app.h"
 
 
-void fileRenamer() {
 
-}
-
-void Connector() {
-
-}
 
 USER_INFO parseJson() {
     USER_INFO user;
@@ -32,6 +26,8 @@ USER_INFO parseJson() {
     return user;
 
 }
+
+
 
 void getRecord() {
 
@@ -61,9 +57,10 @@ void filterRecord() {
 
 }
 
-void mainwindow()
-{
-    GtkWidget *window;
-    GtkBuilder *builder;
+void fileRenamer() {
+
+}
+
+void Connector() {
 
 }
