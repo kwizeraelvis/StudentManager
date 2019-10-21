@@ -12,6 +12,8 @@ addons:
       - gcc-6
       - g++-6
       - cmake
+      - libgtk-3-dev
+      - libglib2.0-0
 script:
   # Link gcc-6 and g++-6 to their standard commands
   - ln -s /usr/bin/gcc-6 /usr/local/bin/gcc
